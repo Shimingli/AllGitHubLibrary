@@ -10,10 +10,14 @@ import android.widget.TextView;
 import com.lsm.rxbuslibrary.ExtendEvents;
 import com.lsm.rxbuslibrary.ExtendSyncRxBus;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
+
 
 /**
  * <p>
- *
+ *  https://jitpack.io/#Shimingli/AllGitHubLibrary/1.0.1
  * </p>
  *
  * @author shiming
@@ -46,20 +50,20 @@ public class NewExtendEventsActivity extends AppCompatActivity {
         });
         mDes = findViewById(R.id.tv_s_des);
 
-//        ExtendSyncRxBus.getInstance().toObservable()
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Consumer<ExtendEvents>() {
-//                    @Override
-//                    public void accept(ExtendEvents extendEvents) throws Exception {
-//                        handlerEvents(extendEvents);
-//                    }
-//                }, new Consumer<Throwable>() {
-//                    @Override
-//                    public void accept(Throwable throwable) throws Exception {
-//
-//                    }
-//                });
+        ExtendSyncRxBus.getInstance().toObservable()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<ExtendEvents>() {
+                    @Override
+                    public void accept(ExtendEvents extendEvents) throws Exception {
+                        handlerEvents(extendEvents);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+
+                    }
+                });
 
     }
 
