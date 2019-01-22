@@ -2,7 +2,8 @@
 * 这是我生成所有依赖的地方，后续要维护更新 
 
 * tks [
-GitHub+jitpack生成自己的Compile依赖](https://blog.csdn.net/DeMonliuhui/article/details/78066784) 提供的帮助 
+GitHub+jitpack生成自己的Compile依赖](https://blog.csdn.net/DeMonliuhui/article/details/78066784) 提供的帮助
+* 使用以上的上传的方式， 会导致aar引用不到第三方的依赖
 
 
 * https://jitpack.io/#Shimingli/AllGitHubLibrary/1.0
@@ -26,6 +27,7 @@ License
 
     Copyright 2014 Netflix, Inc.
     Copyright 2015 Jake Wharton
+    Copyright 2019 Lishiming
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

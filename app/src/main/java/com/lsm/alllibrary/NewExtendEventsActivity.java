@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+
 import com.lsm.rxbuslibrary.ExtendEvents;
 import com.lsm.rxbuslibrary.ExtendSyncRxBus;
 
