@@ -5,6 +5,9 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url "https://lishiming.bintray.com/MyMaven"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
@@ -25,9 +28,15 @@ allprojects {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+    
+        
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+// 指定javadoc UTF-8格式
+task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
 }
