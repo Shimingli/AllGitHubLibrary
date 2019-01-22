@@ -8,6 +8,9 @@ GitHub+jitpack生成自己的Compile依赖](https://blog.csdn.net/DeMonliuhui/ar
 
 * https://jitpack.io/#Shimingli/AllGitHubLibrary/1.0
 
+* [
+idea中terminal的配置](https://blog.csdn.net/fz13768884254/article/details/82761143)
+
 ```
 
 implementation 'com.github.Shimingli:AllGitHubLibrary:1.0'
@@ -19,6 +22,23 @@ implementation 'com.github.Shimingli:AllGitHubLibrary:1.0'
     api  "com.jakewharton.rxrelay2:rxrelay:2.0.0"
     api 'io.reactivex.rxjava2:rxjava:2.2.2'
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+```
+
+
+
+* 另外一种方式
+* [
+Android 快速发布开源项目到jcenter](https://blog.csdn.net/lmj623565791/article/details/51148825)
+
+
+
+
+```
+https://bintray.com/profile/edit  查看key的网址 
+
+
+.\gradlew clean build bintrayUpload
+
 ```
 
 

@@ -45,7 +45,7 @@ public class ExtendEvents<T> {
 
     /**
      * 如果你要标记其他的选项
-     * @param mflagChoose
+     * @param mflagChoose 标记
      */
     public void setFlagChoose(int mflagChoose) {
         this.mflagChoose = mflagChoose;

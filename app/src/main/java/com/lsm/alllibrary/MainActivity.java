@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lsm.rxbuslibrary.ExtendEvents;
-import com.lsm.rxbuslibrary.ExtendSyncRxBus;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;

@@ -1,11 +1,9 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.lsm.rxbuslibrary'
-
+//apply plugin: 'com.github.dcendents.android-maven'
+//group='com.lsm.rxbuslibrary'
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 15
@@ -26,13 +24,41 @@ android {
 
 }
 
+
+publish {
+    repoName="MyMaven"//仓库名 我远程自己创建的仓库
+    userOrg = 'lishiming'//bintray.com用户名
+    groupId = 'com.lsm.rxbuslibrary'//jcenter上的路径
+    artifactId = 'rxbuslibrary'//项目名称
+    publishVersion = '1.0.1'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'
+    website = 'https://github.com/Shimingli/AllGitHubLibrary'
+//    636e4efc45ad6cc33c2d60ce73c0fedda6ea463d
+//    gradlew clean build bintrayUpload -PbintrayUser=shimingli  -PbintrayKey=636e4efc45ad6cc33c2d60ce73c0fedda6ea463d -PbryRun=false
+}
+
+
 dependencies {
-//    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//
-//    implementation 'com.android.support:appcompat-v7:28.0.0'
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     api  "com.jakewharton.rxrelay2:rxrelay:2.1.0"
 
 }
+//如果你开源库中有中文注释在moudel的build.gradle加入格式
+allprojects {
+    repositories {
+        jcenter()
+    }
+    //加上这些
+    tasks.withType(Javadoc) {
+        options{ encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
