@@ -5,9 +5,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-//        maven {
-//            url "https://lishiming.bintray.com/MyMaven"
-//        }
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
@@ -29,7 +27,10 @@ allprojects {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
-    
+        //没有审批我就加了
+        maven {
+            url "https://lishiming.bintray.com/maven"
+        }
         
     }
 }
