@@ -5,7 +5,7 @@
 | 项目名 | 文档说明 |源码 | Demo |最新版本|
 | :------| ------: | :------: | :------: | :------: |
 | 基于Glide4.7.1二次封装 | [基于Glide4.7.1二次封装](https://www.jianshu.com/p/aecd92515cea) | [源码](https://github.com/Shimingli/ImageLoader) | 无 | 发布中|
-| Hement | [Hement](https://www.jianshu.com/u/a58eb984bda4) | [源码](https://github.com/Shimingli/Hement) | 无 | 发布中|
+| rxbus | [rxbus](https://www.jianshu.com/u/a58eb984bda4) | [源码](https://github.com/Shimingli/AllGitHubLibrary/tree/master/rxbuslibrary) | 无 | 发布中|
 
 
 
