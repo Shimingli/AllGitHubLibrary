@@ -44,6 +44,64 @@ https://bintray.com/profile/edit  查看key的网址
 
 
 * 终极参考[Android上传Library到Jcenter的坑与解](https://www.jianshu.com/p/65d8485b4d34)
+
+
+
+
+
+```
+
+gradlew clean build bintrayUpload -PbintrayUser=shimingli  -PbintrayKey=636e4efc45ad6cc33c2d60ce73c0fedda6ea463d -PbryRun=false
+
+> Task :app:lint 
+Ran lint on variant release: 10 issues found
+Ran lint on variant debug: 10 issues found
+Wrote HTML report to file:///E:/Android/2019_Worck_Space/AllGitHubLibrary/app/build/reports/lint-results.html
+Wrote XML report to file:///E:/Android/2019_Worck_Space/AllGitHubLibrary/app/build/reports/lint-results.xml
+
+> Task :test:javadoc 
+E:\Android\2019_Worck_Space\AllGitHubLibrary\test\src\main\java\com\lsm\test\TestUtils.java:9: 警告: <p> 标记为空
+ * </p>
+   ^
+1 个警告
+
+> Task :test:lint 
+Ran lint on variant release: 1 issues found
+Ran lint on variant debug: 1 issues found
+Wrote HTML report to file:///E:/Android/2019_Worck_Space/AllGitHubLibrary/test/build/reports/lint-results.html
+Wrote XML report to file:///E:/Android/2019_Worck_Space/AllGitHubLibrary/test/build/reports/lint-results.xml
+
+> Task :test:bintrayUpload 
+Uploading to https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1.pom...
+Uploaded to 'https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1.pom'.
+Uploading to https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1-javadoc.jar...
+Uploaded to 'https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1-javadoc.jar'.
+Uploading to https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1-sources.jar...
+Uploaded to 'https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1-sources.jar'.
+Uploading to https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1.aar...
+Uploaded to 'https://api.bintray.com/content/lishiming/maven/test/1.0.1/com/lsm/test/test/1.0.1/test-1.0.1.aar'.
+
+
+BUILD SUCCESSFUL in 5m 34s
+127 actionable tasks: 123 executed, 4 up-to-date
+E:\Android\2019_Worck_Space\AllGitHubLibrary>
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 License
 -------
 

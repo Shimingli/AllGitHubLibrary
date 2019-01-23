@@ -1,1 +1,1 @@
-include ':app', ':rxbuslibrary'
+include ':app', ':rxbuslibrary', ':test'

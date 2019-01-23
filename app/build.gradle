@@ -33,4 +33,5 @@ dependencies {
 //    api 'com.lsm.rxbuslibrary:1.0.1'
     api 'com.lishiming.maven:rxbuslibrary:1.0.1'
 //    implementation project(':rxbuslibrary')
+    api 'com.lsm.test:test:1.0.1'
 }
