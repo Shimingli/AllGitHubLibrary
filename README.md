@@ -42,6 +42,8 @@ https://bintray.com/profile/edit  查看key的网址
 ```
 
 
+
+* 终极参考[Android上传Library到Jcenter的坑与解](https://www.jianshu.com/p/65d8485b4d34)
 License
 -------
 
