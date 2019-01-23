@@ -1,5 +1,16 @@
 # AllGitHubLibrary
 * 这是我生成所有依赖的地方，后续要维护更新 
+* 目前依赖的项目 
+| 项目名 | 文档说明 |源码 | Demo |最新版本|
+| :------| ------: | :------: | :------: | :------: |
+| 基于Glide4.7.1二次封装 | [基于Glide4.7.1二次封装](https://www.jianshu.com/p/aecd92515cea) | [源码](https://github.com/Shimingli/ImageLoader) | 无 | 发布中|
+| Hement | [Hement](https://www.jianshu.com/u/a58eb984bda4) | [源码](https://github.com/Shimingli/Hement) | 无 | 发布中|
+```
+    api 'com.lsm.test:test:1.0.1'
+    api 'com.lsm.maven:rxbuslibrary:1.0.1'
+    api 'com.lsm.maven:imageloader:1.0.0'
+
+```
 
 * tks [
 GitHub+jitpack生成自己的Compile依赖](https://blog.csdn.net/DeMonliuhui/article/details/78066784) 提供的帮助
@@ -11,10 +22,7 @@ GitHub+jitpack生成自己的Compile依赖](https://blog.csdn.net/DeMonliuhui/ar
 * [
 idea中terminal的配置](https://blog.csdn.net/fz13768884254/article/details/82761143)
 
-```
 
-implementation 'com.github.Shimingli:AllGitHubLibrary:1.0'
-```
 
 * RxBus中的依赖
 
