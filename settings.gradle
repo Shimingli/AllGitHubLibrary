@@ -1,1 +1,1 @@
-include ':app', ':rxbuslibrary', ':test'
+include ':app', ':rxbuslibrary', ':test', ':imageloader'
