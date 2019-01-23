@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 /**
  * <p>
- *
+ *  这个依赖废弃掉不使用了
  * </p>
  *
  * @author shiming

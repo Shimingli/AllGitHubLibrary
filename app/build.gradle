@@ -31,7 +31,8 @@ dependencies {
     api 'io.reactivex.rxjava2:rxjava:2.2.2'
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
 //    api 'com.lsm.rxbuslibrary:1.0.1'
-    api 'com.lishiming.maven:rxbuslibrary:1.0.1'
+//    api 'com.lishiming.maven:rxbuslibrary:1.0.1'
 //    implementation project(':rxbuslibrary')
     api 'com.lsm.test:test:1.0.1'
+    api 'com.lsm.maven:rxbuslibrary:1.0.1'
 }

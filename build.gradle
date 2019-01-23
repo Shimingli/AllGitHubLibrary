@@ -31,7 +31,10 @@ allprojects {
         maven {
             url "https://lishiming.bintray.com/maven"
         }
-        
+        //我的另外一个  
+        maven {
+            url "https://dl.bintray.com/shimingtongxue/maven/"
+        }
     }
 }
 

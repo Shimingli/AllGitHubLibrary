@@ -2,7 +2,8 @@ package com.lsm.rxbuslibrary;
 
 /**
  * <p>
- *  事件的累计
+ *  事件
+ *  使用的shiming同学的账号
  * </p>
  *
  * @author shiming

@@ -1,7 +1,4 @@
 apply plugin: 'com.android.library'
-
-
-
 version "1.0.0"
 
 android {
@@ -30,7 +27,7 @@ android {
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 //发布到组织名称名字，必须填写
-group = "com.lishiming.maven"
+group = "com.lsm.maven"
 //发布到JCenter上的项目名字，必须填写
 def libName = "rxbuslibrary"
 // 版本号，下次更新是只需要更改版本号即可
@@ -81,8 +78,8 @@ install {
                 developers {
                     developer {
                         id 'rxbuslibrary'
-                        name 'lishiming'
-                        email 'shiminglidemo@gmail.com'
+                        name 'shimingtongxue'
+                        email 'weibo15018531365@sina.com'
                     }
                 }
             }
@@ -98,10 +95,10 @@ bintray {
     key = properties.getProperty("bintray.apikey")   //读取 local.properties 文件里面的 bintray.apikey
     configurations = ['archives']
     pkg {
-        userOrg = "lishiming"
+        userOrg = "shimingtongxue"
         repo = "maven"
         name = libName    //发布到JCenter上的项目名字，必须填写
-        desc = 'This is a test '    //项目描述
+        desc = '这是RxBus的依赖项目 '    //项目描述
         licenses = ["Apache-2.0"]
         publish = true
     }
@@ -115,8 +112,8 @@ bintray {
 //    publishVersion = '1.0.0'//版本号
 //    desc = 'Oh hi, this is a nice description for a project, right?'
 //    website = 'https://github.com/Shimingli/AllGitHubLibrary'
-////    636e4efc45ad6cc33c2d60ce73c0fedda6ea463d
-////    gradlew clean build bintrayUpload -PbintrayUser=shimingli  -PbintrayKey=636e4efc45ad6cc33c2d60ce73c0fedda6ea463d -PbryRun=false
+////    2bcc6294a6a5a3c3bea5b729f66892bac903c207
+////    gradlew clean build bintrayUpload -PbintrayUser=shimingtongxue  -PbintrayKey=2bcc6294a6a5a3c3bea5b729f66892bac903c207 -PbryRun=false
 //}
 
 
