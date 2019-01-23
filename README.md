@@ -17,16 +17,19 @@
 
 ```
 
+
+
+
+* 这个就找不到三方的依赖，除非源码是自己的，就可以这样的发布
+ [![](https://jitpack.io/v/Shimingli/AllGitHubLibrary.svg)](https://jitpack.io/#Shimingli/AllGitHubLibrary) 
+
+
+
 * tks [
 GitHub+jitpack生成自己的Compile依赖](https://blog.csdn.net/DeMonliuhui/article/details/78066784) 提供的帮助
 * 使用以上的上传的方式， 会导致aar引用不到第三方的依赖
-
-
-* https://jitpack.io/#Shimingli/AllGitHubLibrary/1.0
-
 * [
 idea中terminal的配置](https://blog.csdn.net/fz13768884254/article/details/82761143)
-
 
 
 * RxBus中的依赖
