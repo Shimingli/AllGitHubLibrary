@@ -406,7 +406,6 @@ public class ImageLoaderV4 implements IImageLoaderClient {
     /**尽管及时取消不必要的加载是很好的实践，但这并不是必须的操作。
      * 实际上，当 Glide.with() 中传入的 Activity 或 Fragment 实例销毁时，
      * Glide 会自动取消加载并回收资源。这里我隐藏了api的调用
-     * {@hide}
      */
     @Override
     public void clear(Activity activity, ImageView imageView) {
@@ -417,7 +416,6 @@ public class ImageLoaderV4 implements IImageLoaderClient {
     /**尽管及时取消不必要的加载是很好的实践，但这并不是必须的操作。
      * 实际上，当 Glide.with() 中传入的 Activity 或 Fragment 实例销毁时，
      * Glide 会自动取消加载并回收资源。这里我隐藏了api的调用
-     * {@hide}
      */
     @Override
     public void clear(Context context, ImageView imageView) {
@@ -428,7 +426,6 @@ public class ImageLoaderV4 implements IImageLoaderClient {
     /**尽管及时取消不必要的加载是很好的实践，但这并不是必须的操作。
      * 实际上，当 Glide.with() 中传入的 Activity 或 Fragment 实例销毁时，
      * Glide 会自动取消加载并回收资源。这里我隐藏了api的调用
-     * {@hide}
      */
     @Override
     public void clear(Fragment fragment, ImageView imageView) {
