@@ -36,6 +36,6 @@ dependencies {
     api 'com.lsm.test:test:1.0.1'
     api 'com.lsm.maven:rxbuslibrary:1.0.1'
     api 'com.lsm.maven:imageloader:1.0.0'
-    implementation project(':ironmanlog')
-    
+//    implementation project(':ironmanlog')
+    api 'com.lsm.maven:ironmanlog:1.0.0'
 }

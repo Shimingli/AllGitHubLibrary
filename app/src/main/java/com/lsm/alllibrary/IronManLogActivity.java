@@ -4,12 +4,10 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.dianping.logan.Logan;
 import com.lsm.ironmanlog.IronManLog;
 
 import java.text.SimpleDateFormat;
@@ -49,6 +47,7 @@ public class IronManLogActivity extends AppCompatActivity {
         IronManLog.w("我要好好学习 天天向上——2", 2);
         IronManLog.w("我要好好学习 天天向上——3", 3);
         IronManLog.w("我要好好学习 天天向上——4", 4);
+        //在正在的开发中 不要立即写入，让它等着Cpu空闲了才去更新
         IronManLog.f();
         mSendBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,128 +1,128 @@
-apply plugin: 'com.android.library'
-
-version "1.0.0"
-android {
-    compileSdkVersion 28
-    
-    defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "${version}"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-}
-
-dependencies {
-    //图片框架需要
-    api  "com.github.bumptech.glide:glide:4.7.1"
-    annotationProcessor "com.github.bumptech.glide:compiler:4.7.1"
-    api "com.github.bumptech.glide:okhttp3-integration:4.5.0"
-}
-
-//需添加如下内容
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-//发布到组织名称名字，必须填写
-group = "com.lsm.maven"
-//发布到JCenter上的项目名字，必须填写
-def libName = "imageloader"
-// 版本号，下次更新是只需要更改版本号即可
-version = "1.0.0"
-
-//生成源文件
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-//生成文档
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    options.encoding "UTF-8"
-    options.charSet 'UTF-8'
-    options.author true
-    options.version true
-    failOnError false
-}
-
-//文档打包成jar
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-//拷贝javadoc文件
-task copyDoc(type: Copy) {
-    from "${buildDir}/docs/"
-    into "docs"
-}
-
-//上传到jcenter所需要的源码文件
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-// 配置maven库，生成POM.xml文件
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                name '这是图片框架'
-                developers {
-                    developer {
-                        id 'imageloader'
-                        name 'shimingtongxue'
-                        email 'weibo15018531365@sina.com'
-                    }
-                }
-            }
-        }
-    }
-}
-
-//上传到jcenter
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty("bintray.user")    //读取 local.properties 文件里面的 bintray.user
-    key = properties.getProperty("bintray.apikey")   //读取 local.properties 文件里面的 bintray.apikey
-    configurations = ['archives']
-    pkg {
-        userOrg = "shimingtongxue"
-        repo = "maven"
-        name = libName    //发布到JCenter上的项目名字，必须填写
-        desc = '这是imageloader的依赖项目'    //项目描述
-        licenses = ["Apache-2.0"]
-        publish = true
-    }
-}
-
-//    gradlew clean build bintrayUpload -PbintrayUser=shimingtongxue  -PbintrayKey=2bcc6294a6a5a3c3bea5b729f66892bac903c207 -PbryRun=false
-
-//如果你开源库中有中文注释在moudel的build.gradle加入格式
-allprojects {
-    repositories {
-        jcenter()
-    }
-    //加上这些
-    tasks.withType(Javadoc) {
-        options{ encoding "UTF-8"
-            charSet 'UTF-8'
-            links "http://docs.oracle.com/javase/7/docs/api"
-        }
-    }
-}
-
+//apply plugin: 'com.android.library'
+//
+//version "1.0.0"
+//android {
+//    compileSdkVersion 28
+//    
+//    defaultConfig {
+//        minSdkVersion 15
+//        targetSdkVersion 28
+//        versionCode 1
+//        versionName "${version}"
+//
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//
+//    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+//
+//}
+//
+//dependencies {
+//    //图片框架需要
+//    api  "com.github.bumptech.glide:glide:4.7.1"
+//    annotationProcessor "com.github.bumptech.glide:compiler:4.7.1"
+//    api "com.github.bumptech.glide:okhttp3-integration:4.5.0"
+//}
+//
+////需添加如下内容
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
+////发布到组织名称名字，必须填写
+//group = "com.lsm.maven"
+////发布到JCenter上的项目名字，必须填写
+//def libName = "imageloader"
+//// 版本号，下次更新是只需要更改版本号即可
+//version = "1.0.0"
+//
+////生成源文件
+//task sourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+////生成文档
+//task javadoc(type: Javadoc) {
+//    source = android.sourceSets.main.java.srcDirs
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//    options.encoding "UTF-8"
+//    options.charSet 'UTF-8'
+//    options.author true
+//    options.version true
+//    failOnError false
+//}
+//
+////文档打包成jar
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+////拷贝javadoc文件
+//task copyDoc(type: Copy) {
+//    from "${buildDir}/docs/"
+//    into "docs"
+//}
+//
+////上传到jcenter所需要的源码文件
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}
+//
+//// 配置maven库，生成POM.xml文件
+//install {
+//    repositories.mavenInstaller {
+//        // This generates POM.xml with proper parameters
+//        pom {
+//            project {
+//                packaging 'aar'
+//                name '这是图片框架'
+//                developers {
+//                    developer {
+//                        id 'imageloader'
+//                        name 'shimingtongxue'
+//                        email 'weibo15018531365@sina.com'
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+//
+////上传到jcenter
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//bintray {
+//    user = properties.getProperty("bintray.user")    //读取 local.properties 文件里面的 bintray.user
+//    key = properties.getProperty("bintray.apikey")   //读取 local.properties 文件里面的 bintray.apikey
+//    configurations = ['archives']
+//    pkg {
+//        userOrg = "shimingtongxue"
+//        repo = "maven"
+//        name = libName    //发布到JCenter上的项目名字，必须填写
+//        desc = '这是imageloader的依赖项目'    //项目描述
+//        licenses = ["Apache-2.0"]
+//        publish = true
+//    }
+//}
+//
+////    gradlew clean build bintrayUpload -PbintrayUser=shimingtongxue  -PbintrayKey=2bcc6294a6a5a3c3bea5b729f66892bac903c207 -PbryRun=false
+//
+////如果你开源库中有中文注释在moudel的build.gradle加入格式
+//allprojects {
+//    repositories {
+//        jcenter()
+//    }
+//    //加上这些
+//    tasks.withType(Javadoc) {
+//        options{ encoding "UTF-8"
+//            charSet 'UTF-8'
+//            links "http://docs.oracle.com/javase/7/docs/api"
+//        }
+//    }
+//}
+//
