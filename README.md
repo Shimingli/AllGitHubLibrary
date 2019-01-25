@@ -66,7 +66,7 @@ https://bintray.com/profile/edit  查看key的网址
 
 
 
-![Image text](image/addtojcenter.png)
+![](image/addtojcenter.png)
 
 
 
