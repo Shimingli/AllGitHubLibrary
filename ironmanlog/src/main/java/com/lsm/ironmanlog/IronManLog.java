@@ -29,7 +29,13 @@ import static android.util.Log.INFO;
 
 public class IronManLog {
 
-    public static void init(IronManLogConfig ironManLogConfig, boolean isDebug) {
+    /**
+     * 初始化工程
+     * @param ironManLogConfig config
+     * @param isDebug 是否是Debug的模式
+     * @param openTestFlag 这个标记就是把平常所有的日志全部给我保存起来  上线请务必关闭
+     */
+    public static void init(IronManLogConfig ironManLogConfig, boolean isDebug, final boolean openTestFlag) {
         LoganConfig config = new LoganConfig.Builder()
                 .setCachePath(ironManLogConfig.mContext.getFilesDir().getAbsolutePath())
                 .setPath(ironManLogConfig.mContext.getExternalFilesDir(null).getAbsolutePath()
@@ -39,10 +45,13 @@ public class IronManLog {
                 .build();
         Logan.init(config);
         FileNameConfig.initFolder();
+        //这样子初始化，有些关键的日志就会存到文档中，同时Debug的日志就不会存入到文本中
         if (isDebug) {
             Timber.plant(new Timber.DebugTree() {
                 @Override
                 protected void log(int priority, String tag, @NotNull String message, Throwable t) {
+                    if (openTestFlag)
+                    FakeCrashLibrary.log(priority, tag, message);
                     super.log(priority, tag, message, t);
                 }
             });
@@ -64,6 +73,7 @@ public class IronManLog {
         @Override
         protected void log(int priority, @org.jetbrains.annotations.Nullable String tag, @NotNull String message, @org.jetbrains.annotations.Nullable Throwable t) {
             if (priority == Log.VERBOSE || priority == Log.DEBUG) {
+
                 return;
             }
             FakeCrashLibrary.log(priority, tag, message);
@@ -94,6 +104,7 @@ public class IronManLog {
     }
 
     /**
+     * 自定义文件的操作 ，但是是加密的
      * @param dates    日期数组，格式：“2018-07-27”
      * @param runnable 发送操作
      * @brief 发送日志

@@ -99,7 +99,7 @@ public class IronManLogConfig {
             mCacheFolder=cacheFolder;
             return this;
         }
-        public Builder  setContext(Context context){
+        public Builder setContext(Context context){
             mContext=context;
             return this;
         }

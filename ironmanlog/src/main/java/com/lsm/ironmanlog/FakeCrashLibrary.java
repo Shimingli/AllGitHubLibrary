@@ -14,6 +14,8 @@ import com.dianping.logan.Logan;
 
 public class FakeCrashLibrary {
 
+
+
     /**
      * 将日志项添加到循环缓冲区。
      * @param priority
@@ -21,7 +23,7 @@ public class FakeCrashLibrary {
      * @param message
      */
     public static void log(int priority, String tag, String message) {
-        Logan.w(message, priority);
+        Logan.w(tag+" "+message, priority);
     }
 
     /**

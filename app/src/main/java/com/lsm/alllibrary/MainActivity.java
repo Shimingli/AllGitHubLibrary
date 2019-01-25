@@ -58,5 +58,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,DemoActivity.class));
             }
         });
+
+
+
+
+        findViewById(R.id.btn_log).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,IronManLogActivity.class));
+            }
+        });
     }
 }
