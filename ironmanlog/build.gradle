@@ -25,10 +25,11 @@ android {
 }
 
 dependencies {
-    
+
     //美团的Logan
     api 'com.dianping.android.sdk:logan:1.1.0'
-  
-    // timber  日志 
+
+    // timber  日志
     api 'com.jakewharton.timber:timber:4.6.1'
+    implementation 'org.jetbrains:annotations-java5:15.0'
 }

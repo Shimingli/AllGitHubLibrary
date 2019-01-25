@@ -1,0 +1,5 @@
+<root>
+    <item name='java.io.File boolean delete()'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

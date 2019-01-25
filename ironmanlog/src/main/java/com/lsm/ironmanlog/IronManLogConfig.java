@@ -30,8 +30,8 @@ public class IronManLogConfig {
     long mMaxQueue = DEFAULT_QUEUE;
     long mMinSDCard = DEFAULT_MIN_SDCARD_SIZE; //最小sdk卡大小
 
-    byte[] mEncryptKey16; //16位aes加密Key
-    byte[] mEncryptIv16; //16位aes加密IV
+    public static byte[] mEncryptKey16; //16位aes加密Key
+    public static byte[] mEncryptIv16; //16位aes加密IV
 
     public static String mUploadFolderName="android"; //由于文件是加密的，如果需要自己解密然后上传到后台的话，那么这里就需要一个文件夹的名称
     public static String mUploadFileName="android.log"; //由于文件是加密的，如果需要自己解密然后上传到后台的话，那么这里就需要一个文件的名称

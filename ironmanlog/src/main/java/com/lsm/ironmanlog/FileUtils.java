@@ -1,6 +1,7 @@
 package com.lsm.ironmanlog;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * <p>
@@ -64,5 +65,25 @@ public class FileUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public static File createFile(String path) {
+        if (path != null) {
+            File file = new File(path);
+            if (file.exists()) {
+                file.delete();
+            }
+            if (!file.exists()) {
+                File file2 = new File(file.getParent());
+                file2.mkdir();
+                try {
+                    file.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return null;
+                }
+            }
+            return file;
+        }
+        return null;
     }
 }
