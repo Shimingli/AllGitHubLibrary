@@ -67,7 +67,7 @@ https://bintray.com/profile/edit  查看key的网址
 
 <img src="/image/addtojcenter.png" width="200px" heigh="200px"/>   
 
-
+![Image text](image/addtojcenter.png)
 
 
 
