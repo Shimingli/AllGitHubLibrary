@@ -108,7 +108,7 @@ bintray {
     configurations = ['archives']
     pkg {
         userOrg = "shimingtongxue"
-        repo = "maven"
+        repo = "maven" //远程厂库的名称 
         name = libName    //发布到JCenter上的项目名字，必须填写
         desc = '这是ironmanlog的依赖项目'    //项目描述
         licenses = ["Apache-2.0"]
