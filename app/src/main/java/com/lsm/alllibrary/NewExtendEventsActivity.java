@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.lsm.rxbuslibrary.ExtendEvents;
 import com.lsm.rxbuslibrary.ExtendSyncRxBus;
-import com.lsm.test.TestUtils;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -59,7 +57,7 @@ public class NewExtendEventsActivity extends AppCompatActivity {
                     @Override
                     public void accept(ExtendEvents extendEvents) throws Exception {
                         handlerEvents(extendEvents);
-                        TestUtils.test(NewExtendEventsActivity.this);
+
                     }
                 }, new Consumer<Throwable>() {
                     @Override

@@ -1,1 +1,1 @@
-include ':app', ':rxbuslibrary', ':test', ':imageloader', ':ironmanlog'
+include ':app', ':rxbuslibrary', ':test', ':imageloader', ':ironmanlog', ':update'

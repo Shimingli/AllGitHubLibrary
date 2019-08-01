@@ -39,6 +39,7 @@ idea中terminal的配置](https://blog.csdn.net/fz13768884254/article/details/82
     api  "com.jakewharton.rxrelay2:rxrelay:2.0.0"
     api 'io.reactivex.rxjava2:rxjava:2.2.2'
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+   api 'com.lsm.maven:ironmanlog:1.0.0'
 ```
 
 

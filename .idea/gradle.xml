@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/ironmanlog" />
             <option value="$PROJECT_DIR$/rxbuslibrary" />
             <option value="$PROJECT_DIR$/test" />
+            <option value="$PROJECT_DIR$/update" />
           </set>
         </option>
       </GradleProjectSettings>
